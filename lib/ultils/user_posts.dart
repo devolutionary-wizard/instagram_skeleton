@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 
 class UserPosts extends StatelessWidget {
   final String name;
-  UserPosts({required this.name});
+  const UserPosts({super.key, required this.name});
   @override
   Widget build(BuildContext context) {
     return Column(
@@ -21,16 +21,16 @@ class UserPosts extends StatelessWidget {
                     decoration: BoxDecoration(
                         shape: BoxShape.circle, color: Colors.grey[200]),
                   ),
-                  SizedBox(
+                  const SizedBox(
                     width: 10,
                   ),
                   Text(
                     name,
-                    style: TextStyle(fontWeight: FontWeight.bold),
+                    style: const TextStyle(fontWeight: FontWeight.bold),
                   ),
                 ],
               ),
-              Icon(Icons.menu)
+              const Icon(Icons.menu)
             ],
           ),
         ),
@@ -39,13 +39,13 @@ class UserPosts extends StatelessWidget {
           color: Colors.grey[300],
         ),
         //bellow the posts ->button and comment
-        Padding(
-          padding: const EdgeInsets.all(16.0),
+        const Padding(
+          padding: EdgeInsets.all(16.0),
           child: Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               Padding(
-                padding: const EdgeInsets.symmetric(horizontal: 12.0),
+                padding: EdgeInsets.symmetric(horizontal: 12.0),
                 child: Row(
                   children: [
                     Icon(Icons.favorite),
@@ -59,8 +59,8 @@ class UserPosts extends StatelessWidget {
           ),
         ),
         //Like By
-        Padding(
-          padding: const EdgeInsets.only(left: 16.0),
+        const Padding(
+          padding: EdgeInsets.only(left: 16.0),
           child: Row(
             children: [
               Text('Like by '),
@@ -79,12 +79,14 @@ class UserPosts extends StatelessWidget {
         Padding(
           padding: const EdgeInsets.only(left: 16.0, top: 8.0),
           child: RichText(
-            text: TextSpan(style: TextStyle(color: Colors.black), children: [
-              TextSpan(
-                  text: 'Naruto',
-                  style: TextStyle(fontWeight: FontWeight.bold)),
-              TextSpan(text: 'ur picture is so cool dude')
-            ]),
+            text: const TextSpan(
+                style: TextStyle(color: Colors.black),
+                children: [
+                  TextSpan(
+                      text: 'Naruto',
+                      style: TextStyle(fontWeight: FontWeight.bold)),
+                  TextSpan(text: 'ur picture is so cool dude')
+                ]),
           ),
         )
       ],

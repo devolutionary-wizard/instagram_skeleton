@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:instagram/homepage.dart';
+import 'package:instagram_skeleton/homepage.dart';
 
 void main() {
   runApp(const MyApp());
@@ -13,7 +13,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       theme: ThemeData(primarySwatch: Colors.grey),
-      home: HomePage(),
+      home: const HomePage(),
     );
   }
 }

@@ -1,11 +1,13 @@
 import 'package:flutter/material.dart';
-import 'package:instagram/ultils/account_tab1.dart';
-import 'package:instagram/ultils/account_tab2.dart';
-import 'package:instagram/ultils/account_tab3.dart';
-import 'package:instagram/ultils/account_tab4.dart';
-import 'package:instagram/ultils/bubble_stories.dart';
+import 'package:instagram_skeleton/ultils/account_tab1.dart';
+import 'package:instagram_skeleton/ultils/account_tab2.dart';
+import 'package:instagram_skeleton/ultils/account_tab3.dart';
+import 'package:instagram_skeleton/ultils/account_tab4.dart';
+import 'package:instagram_skeleton/ultils/bubble_stories.dart';
 
 class UserAccount extends StatelessWidget {
+  const UserAccount({super.key});
+
   @override
   Widget build(BuildContext context) {
     return DefaultTabController(
@@ -25,7 +27,7 @@ class UserAccount extends StatelessWidget {
                     decoration: BoxDecoration(
                         shape: BoxShape.circle, color: Colors.grey[200]),
                   ),
-                  Expanded(
+                  const Expanded(
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                       children: [
@@ -65,8 +67,8 @@ class UserAccount extends StatelessWidget {
                 ],
               ),
             ),
-            Padding(
-              padding: const EdgeInsets.only(left: 25.0, top: 10),
+            const Padding(
+              padding: EdgeInsets.only(left: 25.0, top: 10),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
@@ -75,7 +77,7 @@ class UserAccount extends StatelessWidget {
                     style: TextStyle(fontWeight: FontWeight.bold),
                   ),
                   Padding(
-                    padding: const EdgeInsets.symmetric(vertical: 8.0),
+                    padding: EdgeInsets.symmetric(vertical: 8.0),
                     child: Text('Movie and Game'),
                   ),
                   Text(
@@ -93,11 +95,11 @@ class UserAccount extends StatelessWidget {
                     child: Padding(
                       padding: const EdgeInsets.all(2.0),
                       child: Container(
-                        padding: EdgeInsets.all(8),
-                        child: Center(child: Text('Edit Profile')),
+                        padding: const EdgeInsets.all(8),
                         decoration: BoxDecoration(
                             border: Border.all(color: Colors.grey),
                             borderRadius: BorderRadius.circular(5)),
+                        child: const Center(child: Text('Edit Profile')),
                       ),
                     ),
                   ),
@@ -105,11 +107,11 @@ class UserAccount extends StatelessWidget {
                     child: Padding(
                       padding: const EdgeInsets.all(2.0),
                       child: Container(
-                        padding: EdgeInsets.all(8),
-                        child: Center(child: Text('Add Tools')),
+                        padding: const EdgeInsets.all(8),
                         decoration: BoxDecoration(
                             border: Border.all(color: Colors.grey),
                             borderRadius: BorderRadius.circular(5)),
+                        child: const Center(child: Text('Add Tools')),
                       ),
                     ),
                   ),
@@ -117,20 +119,19 @@ class UserAccount extends StatelessWidget {
                     child: Padding(
                       padding: const EdgeInsets.all(2.0),
                       child: Container(
-                        padding: EdgeInsets.all(8),
-                        child: Center(child: Text('Insights')),
+                        padding: const EdgeInsets.all(8),
                         decoration: BoxDecoration(
                             border: Border.all(color: Colors.grey),
                             borderRadius: BorderRadius.circular(5)),
+                        child: const Center(child: Text('Insights')),
                       ),
                     ),
                   ),
                 ],
               ),
             ),
-            Padding(
-              padding:
-                  const EdgeInsets.symmetric(horizontal: 20.0, vertical: 10),
+            const Padding(
+              padding: EdgeInsets.symmetric(horizontal: 20.0, vertical: 10),
               child: Row(
                 children: [
                   BubbleStories(text: 'Story1'),
@@ -140,7 +141,7 @@ class UserAccount extends StatelessWidget {
                 ],
               ),
             ),
-            TabBar(tabs: [
+            const TabBar(tabs: [
               Tab(
                 icon: Icon(Icons.grid_3x3_outlined),
               ),
@@ -154,7 +155,7 @@ class UserAccount extends StatelessWidget {
                 icon: Icon(Icons.person),
               )
             ]),
-            Expanded(
+            const Expanded(
                 child: TabBarView(children: [
               AccountTab1(),
               AccountTab2(),

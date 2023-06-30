@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
-import 'package:instagram/pages/account.dart';
-import 'package:instagram/pages/home.dart';
-import 'package:instagram/pages/reels.dart';
-import 'package:instagram/pages/search.dart';
-import 'package:instagram/pages/shop.dart';
+import 'package:instagram_skeleton/pages/account.dart';
+import 'package:instagram_skeleton/pages/home.dart';
+import 'package:instagram_skeleton/pages/reels.dart';
+import 'package:instagram_skeleton/pages/search.dart';
+import 'package:instagram_skeleton/pages/shop.dart';
 
 class HomePage extends StatefulWidget {
-  HomePage({Key? key}) : super(key: key);
+  const HomePage({Key? key}) : super(key: key);
 
   @override
   State<HomePage> createState() => _HomePageState();
@@ -25,10 +25,10 @@ class _HomePageState extends State<HomePage> {
   // defferent pages to navigate to
   final List<Widget> _children = [
     UserHome(),
-    UserSearch(),
-    UserReel(),
-    UserShop(),
-    UserAccount(),
+    const UserSearch(),
+    const UserReel(),
+    const UserShop(),
+    const UserAccount(),
   ];
 
   @override
@@ -39,7 +39,7 @@ class _HomePageState extends State<HomePage> {
         type: BottomNavigationBarType.fixed,
         onTap: _navigateBottomNavBar,
         currentIndex: _selectedIndex,
-        items: [
+        items: const [
           BottomNavigationBarItem(icon: Icon(Icons.home), label: 'home'),
           BottomNavigationBarItem(icon: Icon(Icons.search), label: 'search'),
           BottomNavigationBarItem(icon: Icon(Icons.video_call), label: 'reels'),

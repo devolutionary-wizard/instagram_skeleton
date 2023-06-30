@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:instagram/ultils/bubble_stories.dart';
-import 'package:instagram/ultils/user_posts.dart';
+import 'package:instagram_skeleton/ultils/bubble_stories.dart';
+import 'package:instagram_skeleton/ultils/user_posts.dart';
 
 class UserHome extends StatelessWidget {
   final List people = [
@@ -14,13 +14,15 @@ class UserHome extends StatelessWidget {
     'Sanji'
   ];
 
+  UserHome({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Colors.transparent,
         elevation: 0,
-        title: Row(
+        title: const Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
             Text(
@@ -31,7 +33,7 @@ class UserHome extends StatelessWidget {
               children: [
                 Icon(Icons.add),
                 Padding(
-                  padding: const EdgeInsets.all(24.0),
+                  padding: EdgeInsets.all(24.0),
                   child: Icon(Icons.favorite),
                 ),
                 Icon(Icons.share)
@@ -43,7 +45,7 @@ class UserHome extends StatelessWidget {
       body: Column(
         children: [
           // Stories
-          Container(
+          SizedBox(
             height: 130,
             child: ListView.builder(
                 scrollDirection: Axis.horizontal,
